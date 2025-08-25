@@ -1,22 +1,105 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Starter Template</title>
-        <style>
-            body {
-                font-family: sans-serif;
-            }
-            pre {
-                display: inline;
-                background-color: #e4e8f0;
-                border: 1px solid #6d737d;
-                border-radius: 5px;
-                padding: 5px;
-            }
-        </style>
+        <title>Unipesa</title>
+        <link rel="stylesheet" href="../css/app.css">
+        <link rel="stylesheet" href="../css/mobile.css">
+        <link rel="stylesheet" href="../fonts/stylesheet.css">
     </head>
     <body>
-        <h1>Minimal Starter</h1>
-        <div>This is a minimal starter. You can now edit files in <pre>app/</pre>. Your final product will be produced in <pre>dist/</pre>. Run <pre>gulp production</pre> to produce production-ready code (no sourcemaps, etc.)</div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="header">
+                    <a href="#" class="header__logo">
+                        <img src="./img/logo.png" alt="Unipesa Logo">
+                    </a>
+                    
+                    <div class="header__nav">
+                        <div class="dropdown">
+                          <a href="javascript:void(0)" class="header__nav-link dropdown__toggle">
+                            About us
+                            <svg class="dropdown__arrow" xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                              <path d="M13.4907 5.50033C13.7465 5.24451 14.1675 5.24452 14.4233 5.50033C14.6792 5.75615 14.6792 6.17713 14.4233 6.43295L10.0767 10.7796C9.69233 11.1638 9.18478 11.3597 8.67725 11.3597C8.16972 11.3597 7.66216 11.1638 7.27783 10.7796L2.93115 6.43295C2.67534 6.17713 2.67534 5.75615 2.93115 5.50033C3.18697 5.24451 3.60795 5.24451 3.86377 5.50033L8.21045 9.84701C8.46791 10.1042 8.88659 10.1042 9.14404 9.84701L13.4907 5.50033Z" fill="white" stroke="white" stroke-width="0.32"/>
+                            </svg>
+                          </a>
+                          <div class="dropdown__menu">
+                            <a href="#team" class="dropdown__item">Our Team</a>
+                            <a href="#mission" class="dropdown__item">Mission</a>
+                            <a href="#history" class="dropdown__item">History</a>
+                          </div>
+                        </div>
+                      
+                        <div class="dropdown">
+                          <a href="javascript:void(0)" class="header__nav-link dropdown__toggle">
+                            Products
+                            <svg class="dropdown__arrow" xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                              <path d="M13.4907 5.50033C13.7465 5.24451 14.1675 5.24452 14.4233 5.50033C14.6792 5.75615 14.6792 6.17713 14.4233 6.43295L10.0767 10.7796C9.69233 11.1638 9.18478 11.3597 8.67725 11.3597C8.16972 11.3597 7.66216 11.1638 7.27783 10.7796L2.93115 6.43295C2.67534 6.17713 2.67534 5.75615 2.93115 5.50033C3.18697 5.24451 3.60795 5.24451 3.86377 5.50033L8.21045 9.84701C8.46791 10.1042 8.88659 10.1042 9.14404 9.84701L13.4907 5.50033Z" fill="white" stroke="white" stroke-width="0.32"/>
+                            </svg>
+                          </a>
+                          <div class="dropdown__menu">
+                            <a href="#product1" class="dropdown__item">Product 1</a>
+                            <a href="#product2" class="dropdown__item">Product 2</a>
+                            <a href="#product3" class="dropdown__item">Product 3</a>
+                          </div>
+                        </div>
+                      
+                        <div class="dropdown">
+                          <a href="javascript:void(0)" class="header__nav-link dropdown__toggle">
+                            Industries
+                            <svg class="dropdown__arrow" xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                              <path d="M13.4907 5.50033C13.7465 5.24451 14.1675 5.24452 14.4233 5.50033C14.6792 5.75615 14.6792 6.17713 14.4233 6.43295L10.0767 10.7796C9.69233 11.1638 9.18478 11.3597 8.67725 11.3597C8.16972 11.3597 7.66216 11.1638 7.27783 10.7796L2.93115 6.43295C2.67534 6.17713 2.67534 5.75615 2.93115 5.50033C3.18697 5.24451 3.60795 5.24451 3.86377 5.50033L8.21045 9.84701C8.46791 10.1042 8.88659 10.1042 9.14404 9.84701L13.4907 5.50033Z" fill="white" stroke="white" stroke-width="0.32"/>
+                            </svg>
+                          </a>
+                          <div class="dropdown__menu">
+                            <a href="#finance" class="dropdown__item">Finance</a>
+                            <a href="#retail" class="dropdown__item">Retail</a>
+                            <a href="#telecom" class="dropdown__item">Telecom</a>
+                          </div>
+                        </div>
+                      
+                        <a href="#blog" class="header__nav-link">Blog</a>
+                      </div>
+                      
+                    <button class="header__demo-button">Request a demo</button>
+                <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+                  </div>
+           
+
+<div class="mobile-menu-overlay"></div>
+
+      <div class="mobile-menu">
+        <div class="mobile-menu__close">&times;</div>
+        <a href="#team">Our Team</a>
+        <a href="#mission">Mission</a>
+        <a href="#history">History</a>
+        <a href="#product1">Product 1</a>
+        <a href="#product2">Product 2</a>
+        <a href="#product3">Product 3</a>
+        <a href="#finance">Finance</a>
+        <a href="#retail">Retail</a>
+        <a href="#telecom">Telecom</a>
+        <a href="#blog">Blog</a>
+        <button>Request a demo</button>
+      </div>
+
+
+            <div class="content">
+              <div class="content__text">
+                <p class="content__subtitle"><img src="./img/main-icon.svg" alt="icon"> Pan-African network and infrastructure</p>
+                <h1 class="content__title">Financial platform as a service</h1>
+                <p class="content__description">Unipesa gives you the tech foundation to move fast — and stay in control. We handle technology. You grow business.</p>
+              </div>  
+              <div class="content__button-link">
+                <button class="content__action-button">Book a demo</button>
+                <a href="#how-it-works" class="content__link">See how it works →</a>
+                </div>
+            </div>
+         </div>
+        </div>
+        <script defer src="./js/app.js"></script>
     </body>
 </html>

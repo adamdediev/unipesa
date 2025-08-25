@@ -1,0 +1,251 @@
+$primary:#05146F;
+
+body{
+    margin: 20px;
+    font-family: Metropolis;
+}
+p,h1{
+    margin: 0px;
+}
+button,a{
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+.wrapper{
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    border-radius: 50px;
+    position: relative;
+    
+}
+
+.container{
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.header{
+    display: flex;
+    padding: 24px 40px;
+    justify-content: space-between;
+    align-items: center;
+    &__logo{
+        width: 130px;
+        height: 32px;
+        display: flex;
+    }
+    &__demo-button{
+        font-size: 1rem;
+        font-weight: 500;
+        color: $primary;
+        padding: 12px 24px;
+        background: #FFF;
+        outline: none;
+        border-radius: 36px;
+        border: 1px solid #fff;
+        &:hover{
+            color: #FFF;
+            box-sizing: border-box;
+            background: $primary;
+          }
+    }   
+    &__nav{
+        gap: 30px;
+        display: flex;
+        &-link{
+            color: #FFF;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+}
+.dropdown {
+    position: relative;
+  
+    &__toggle {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  
+    &__arrow {
+      transition: transform 0.3s ease;
+    }
+  
+    &__menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      border-radius: 8px;
+      min-width: 60px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 100;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      margin-top: 12px;
+      transition: all 0.3s ease;
+    }
+  
+    &__item {
+      display: block;
+      padding: 10px 16px;
+      color: $primary;
+      text-decoration: none;
+      white-space: nowrap;
+  
+      &:hover {
+        background: $primary;
+        color: #fff;
+      }
+    }
+  
+    &.active {
+      .dropdown__menu {
+        max-height: 400px;
+        opacity: 1;
+      }
+      .dropdown__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+.content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    gap: 32px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 100px;
+    &__text{
+      display: flex;
+      gap: 32px;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__subtitle{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    &__title{
+        font-size: 4.4rem;
+    }
+    &__description{
+      font-size: 1.4rem;
+      line-height: 130%; 
+    }
+    &__button-link{
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0.36px;
+    }
+    &__action-button{
+      border-radius: 46px;
+      background: #FF6E01;
+      padding: 12px 24px;
+      outline: none;
+      line-height: 150%; 
+      letter-spacing:inherit;
+      font-weight: inherit;
+      border: none;
+      font-size: inherit;
+      &:hover{
+        background: #FFF;
+        color: #FF6E01;
+        
+      }
+    }
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-top: 60px;
+
+    &__subtitle{
+      display: flex;
+      flex-direction: column;
+    }
+    &__title{
+      margin-top: 40px;
+      font-size: 2.65rem;
+      line-height: 110%
+    }
+    &__description{
+      font-size: 1.1rem;
+    }
+     &__text {
+      gap: 20px;
+     }
+}
+}
+
+@media (max-width: 568px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex: 1; 
+    }
+  }
+  .header{
+    padding: 24px 16px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1; 
+      justify-content: flex-start;
+    }
+
+    &__button-link {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      margin-top: auto; 
+      margin-bottom: 60px;
+
+    button,
+      a {
+        width: 100%;
+        flex: none;
+      }
+    }
+  }
+}
+
